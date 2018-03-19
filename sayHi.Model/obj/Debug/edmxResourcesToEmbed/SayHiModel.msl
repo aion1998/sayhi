@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="sayHiModelStoreContainer" CdmEntityContainer="sayHiEntities">
+    <EntitySetMapping Name="sayhi_AdminInfo">
+      <EntityTypeMapping TypeName="sayHiModel.sayhi_AdminInfo">
+        <MappingFragment StoreEntitySet="sayhi-AdminInfo">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="AdminName" ColumnName="AdminName" />
+          <ScalarProperty Name="AdminImg" ColumnName="AdminImg" />
+          <ScalarProperty Name="AdminPwd" ColumnName="AdminPwd" />
+          <ScalarProperty Name="Effect" ColumnName="Effect" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sayHi_BookInfo">
+      <EntityTypeMapping TypeName="sayHiModel.sayHi_BookInfo">
+        <MappingFragment StoreEntitySet="sayHi-BookInfo">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="uid" ColumnName="uid" />
+          <ScalarProperty Name="bookName" ColumnName="bookName" />
+          <ScalarProperty Name="bookCover" ColumnName="bookCover" />
+          <ScalarProperty Name="bookState" ColumnName="bookState" />
+          <ScalarProperty Name="bookTag" ColumnName="bookTag" />
+          <ScalarProperty Name="bookType" ColumnName="bookType" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="Effect" ColumnName="Effect" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sayHi_BookInfo_Chapter">
+      <EntityTypeMapping TypeName="sayHiModel.sayHi_BookInfo_Chapter">
+        <MappingFragment StoreEntitySet="sayHi-BookInfo-Chapter">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="bookId" ColumnName="bookId" />
+          <ScalarProperty Name="ChapterName" ColumnName="ChapterName" />
+          <ScalarProperty Name="ChapterOrderByNumber" ColumnName="ChapterOrderByNumber" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="Effect" ColumnName="Effect" />
+          <ScalarProperty Name="ChapterPic" ColumnName="ChapterPic" />
+          <ScalarProperty Name="ChapterContent" ColumnName="ChapterContent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sayHi_BookInfo_CharacterDesign">
+      <EntityTypeMapping TypeName="sayHiModel.sayHi_BookInfo_CharacterDesign">
+        <MappingFragment StoreEntitySet="sayHi-BookInfo-CharacterDesign">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="bookId" ColumnName="bookId" />
+          <ScalarProperty Name="CharacterDesignId" ColumnName="CharacterDesignId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="Effect" ColumnName="Effect" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sayHi_CharacterDesign">
+      <EntityTypeMapping TypeName="sayHiModel.sayHi_CharacterDesign">
+        <MappingFragment StoreEntitySet="sayHi-CharacterDesign">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="KeyFrame" ColumnName="KeyFrame" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="BgStory" ColumnName="BgStory" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Effect" ColumnName="Effect" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sayhi_LikesInfo">
+      <EntityTypeMapping TypeName="sayHiModel.sayhi_LikesInfo">
+        <MappingFragment StoreEntitySet="sayhi-LikesInfo">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="RelationId" ColumnName="RelationId" />
+          <ScalarProperty Name="RelationType" ColumnName="RelationType" />
+          <ScalarProperty Name="Effect" ColumnName="Effect" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sayHi_MangaInfo">
+      <EntityTypeMapping TypeName="sayHiModel.sayHi_MangaInfo">
+        <MappingFragment StoreEntitySet="sayHi-MangaInfo">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Cover" ColumnName="Cover" />
+          <ScalarProperty Name="BookSource" ColumnName="BookSource" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="OtherPerson" ColumnName="OtherPerson" />
+          <ScalarProperty Name="uId" ColumnName="uId" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="Effect" ColumnName="Effect" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sayhi_MangaInfo_Chapter">
+      <EntityTypeMapping TypeName="sayHiModel.sayhi_MangaInfo_Chapter">
+        <MappingFragment StoreEntitySet="sayhi-MangaInfo-Chapter">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="MangaId" ColumnName="MangaId" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="Sort" ColumnName="Sort" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="Effect" ColumnName="Effect" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sayhi_MangaInfo_CharacterDesign">
+      <EntityTypeMapping TypeName="sayHiModel.sayhi_MangaInfo_CharacterDesign">
+        <MappingFragment StoreEntitySet="sayhi-MangaInfo-CharacterDesign">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="MangaId" ColumnName="MangaId" />
+          <ScalarProperty Name="CharacterDesignId" ColumnName="CharacterDesignId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="Effect" ColumnName="Effect" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sayhi_NoticeInfo">
+      <EntityTypeMapping TypeName="sayHiModel.sayhi_NoticeInfo">
+        <MappingFragment StoreEntitySet="sayhi-NoticeInfo">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="NoticeTitle" ColumnName="NoticeTitle" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="NoticeContent" ColumnName="NoticeContent" />
+          <ScalarProperty Name="Effect" ColumnName="Effect" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="CheckNum" ColumnName="CheckNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sayhi_ParoInfo">
+      <EntityTypeMapping TypeName="sayHiModel.sayhi_ParoInfo">
+        <MappingFragment StoreEntitySet="sayhi-ParoInfo">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="NoticeId" ColumnName="NoticeId" />
+          <ScalarProperty Name="ParoName" ColumnName="ParoName" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Effect" ColumnName="Effect" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sayhi_ParoInfo_ParticipateInWorks">
+      <EntityTypeMapping TypeName="sayHiModel.sayhi_ParoInfo_ParticipateInWorks">
+        <MappingFragment StoreEntitySet="sayhi-ParoInfo-ParticipateInWorks">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ParoId" ColumnName="ParoId" />
+          <ScalarProperty Name="WorksId" ColumnName="WorksId" />
+          <ScalarProperty Name="Effect" ColumnName="Effect" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="WorlsType" ColumnName="WorlsType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sayhi_PlanningInfo">
+      <EntityTypeMapping TypeName="sayHiModel.sayhi_PlanningInfo">
+        <MappingFragment StoreEntitySet="sayhi-PlanningInfo">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="NoticeId" ColumnName="NoticeId" />
+          <ScalarProperty Name="PlanningName" ColumnName="PlanningName" />
+          <ScalarProperty Name="WorksName" ColumnName="WorksName" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="PlanningState" ColumnName="PlanningState" />
+          <ScalarProperty Name="Effect" ColumnName="Effect" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sayhi_PlanningInfo_Chapter">
+      <EntityTypeMapping TypeName="sayHiModel.sayhi_PlanningInfo_Chapter">
+        <MappingFragment StoreEntitySet="sayhi-PlanningInfo-Chapter">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="PlanningId" ColumnName="PlanningId" />
+          <ScalarProperty Name="ChapterTitel" ColumnName="ChapterTitel" />
+          <ScalarProperty Name="ChapterContent" ColumnName="ChapterContent" />
+          <ScalarProperty Name="ChapterSort" ColumnName="ChapterSort" />
+          <ScalarProperty Name="Effect" ColumnName="Effect" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sayhi_PlanningInfo_ParticipateIn">
+      <EntityTypeMapping TypeName="sayHiModel.sayhi_PlanningInfo_ParticipateIn">
+        <MappingFragment StoreEntitySet="sayhi-PlanningInfo-ParticipateIn">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="PlanningId" ColumnName="PlanningId" />
+          <ScalarProperty Name="ParticipantId" ColumnName="ParticipantId" />
+          <ScalarProperty Name="CharacterDesignId" ColumnName="CharacterDesignId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="Effect" ColumnName="Effect" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sayhi_PlanningInfo_ParticipateInContent">
+      <EntityTypeMapping TypeName="sayHiModel.sayhi_PlanningInfo_ParticipateInContent">
+        <MappingFragment StoreEntitySet="sayhi-PlanningInfo-ParticipateInContent">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ChapterId" ColumnName="ChapterId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="Effect" ColumnName="Effect" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sayHi_UserInfo">
+      <EntityTypeMapping TypeName="sayHiModel.sayHi_UserInfo">
+        <MappingFragment StoreEntitySet="sayHi-UserInfo">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Pwd" ColumnName="Pwd" />
+          <ScalarProperty Name="HeadPortrait" ColumnName="HeadPortrait" />
+          <ScalarProperty Name="BannerPic" ColumnName="BannerPic" />
+          <ScalarProperty Name="Power" ColumnName="Power" />
+          <ScalarProperty Name="Autograph" ColumnName="Autograph" />
+          <ScalarProperty Name="Integral" ColumnName="Integral" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="Effect" ColumnName="Effect" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sayHi_UserInfo_CIF">
+      <EntityTypeMapping TypeName="sayHiModel.sayHi_UserInfo_CIF">
+        <MappingFragment StoreEntitySet="sayHi-UserInfo-CIF">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ContactInformation" ColumnName="ContactInformation" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="Effect" ColumnName="Effect" />
+          <ScalarProperty Name="uid" ColumnName="uid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sayHi_UserInfo_Honor">
+      <EntityTypeMapping TypeName="sayHiModel.sayHi_UserInfo_Honor">
+        <MappingFragment StoreEntitySet="sayHi-UserInfo-Honor">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="uid" ColumnName="uid" />
+          <ScalarProperty Name="UidOnely" ColumnName="UidOnely" />
+          <ScalarProperty Name="HonorName" ColumnName="HonorName" />
+          <ScalarProperty Name="HonorLv" ColumnName="HonorLv" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="Effect" ColumnName="Effect" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sayHi_UserInfo_Power">
+      <EntityTypeMapping TypeName="sayHiModel.sayHi_UserInfo_Power">
+        <MappingFragment StoreEntitySet="sayHi-UserInfo-Power">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Identification" ColumnName="Identification" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="Effect" ColumnName="Effect" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sayHi_UserInfo_UID">
+      <EntityTypeMapping TypeName="sayHiModel.sayHi_UserInfo_UID">
+        <MappingFragment StoreEntitySet="sayHi-UserInfo-UID">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="UIDName" ColumnName="UIDName" />
+          <ScalarProperty Name="UIDExp" ColumnName="UIDExp" />
+          <ScalarProperty Name="NumberOfTimes" ColumnName="NumberOfTimes" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="Effect" ColumnName="Effect" />
+          <ScalarProperty Name="uid" ColumnName="uid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="sayHiModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="sayhi_AdminInfo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AdminName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AdminImg" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="AdminPwd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Effect" Type="Boolean" Nullable="false" />
+    <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="sayHi_BookInfo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="uid" Type="Int32" Nullable="false" />
+    <Property Name="bookName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="bookCover" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="bookState" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="bookTag" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="bookType" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Effect" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sayHi_BookInfo_Chapter">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="bookId" Type="Int32" />
+    <Property Name="ChapterName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ChapterOrderByNumber" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Effect" Type="Boolean" Nullable="false" />
+    <Property Name="ChapterPic" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="ChapterContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="sayHi_BookInfo_CharacterDesign">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="bookId" Type="Int32" />
+    <Property Name="CharacterDesignId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Effect" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sayHi_CharacterDesign">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="KeyFrame" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Gender" Type="Boolean" />
+    <Property Name="BgStory" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Type" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Effect" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sayhi_LikesInfo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RelationId" Type="Int32" Nullable="false" />
+    <Property Name="RelationType" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Effect" Type="Boolean" Nullable="false" />
+    <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="sayHi_MangaInfo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Cover" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="BookSource" Type="Int32" />
+    <Property Name="State" Type="Boolean" />
+    <Property Name="OtherPerson" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="uId" Type="Int32" Nullable="false" />
+    <Property Name="Type" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Effect" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sayhi_MangaInfo_Chapter">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MangaId" Type="Int32" />
+    <Property Name="Content" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Sort" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="Effect" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="sayhi_MangaInfo_CharacterDesign">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MangaId" Type="Int32" />
+    <Property Name="CharacterDesignId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="Effect" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="sayhi_NoticeInfo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NoticeTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="NoticeContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Effect" Type="Boolean" Nullable="false" />
+    <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CheckNum" Type="Int32" />
+  </EntityType>
+  <EntityType Name="sayhi_ParoInfo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" />
+    <Property Name="NoticeId" Type="Int32" />
+    <Property Name="ParoName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="State" Type="Boolean" />
+    <Property Name="Effect" Type="Boolean" Nullable="false" />
+    <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="sayhi_ParoInfo_ParticipateInWorks">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ParoId" Type="Int32" Nullable="false" />
+    <Property Name="WorksId" Type="Int32" Nullable="false" />
+    <Property Name="Effect" Type="Boolean" Nullable="false" />
+    <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="WorlsType" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sayhi_PlanningInfo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="NoticeId" Type="Int32" Nullable="false" />
+    <Property Name="PlanningName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="WorksName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="PlanningState" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Effect" Type="Boolean" Nullable="false" />
+    <Property Name="StartTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="sayhi_PlanningInfo_Chapter">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PlanningId" Type="Int32" Nullable="false" />
+    <Property Name="ChapterTitel" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ChapterContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ChapterSort" Type="Int32" />
+    <Property Name="Effect" Type="Boolean" Nullable="false" />
+    <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="sayhi_PlanningInfo_ParticipateIn">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PlanningId" Type="Int32" Nullable="false" />
+    <Property Name="ParticipantId" Type="Int32" Nullable="false" />
+    <Property Name="CharacterDesignId" Type="Int32" Nullable="false" />
+    <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Effect" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sayhi_PlanningInfo_ParticipateInContent">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ChapterId" Type="Int32" Nullable="false" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Effect" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sayHi_UserInfo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Pwd" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="HeadPortrait" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="BannerPic" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="Power" Type="Int32" />
+    <Property Name="Autograph" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Integral" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Effect" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sayHi_UserInfo_CIF">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ContactInformation" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Url" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Number" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Effect" Type="Boolean" Nullable="false" />
+    <Property Name="uid" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sayHi_UserInfo_Honor">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="uid" Type="Int32" Nullable="false" />
+    <Property Name="UidOnely" Type="Int32" Nullable="false" />
+    <Property Name="HonorName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HonorLv" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Effect" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="sayHi_UserInfo_Power">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Identification" Type="Int32" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="Effect" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="sayHi_UserInfo_UID">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UIDName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UIDExp" Type="Int32" />
+    <Property Name="NumberOfTimes" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Effect" Type="Boolean" Nullable="false" />
+    <Property Name="uid" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="sayHiEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="sayhi_AdminInfo" EntityType="Self.sayhi_AdminInfo" />
+    <EntitySet Name="sayHi_BookInfo" EntityType="Self.sayHi_BookInfo" />
+    <EntitySet Name="sayHi_BookInfo_Chapter" EntityType="Self.sayHi_BookInfo_Chapter" />
+    <EntitySet Name="sayHi_BookInfo_CharacterDesign" EntityType="Self.sayHi_BookInfo_CharacterDesign" />
+    <EntitySet Name="sayHi_CharacterDesign" EntityType="Self.sayHi_CharacterDesign" />
+    <EntitySet Name="sayhi_LikesInfo" EntityType="Self.sayhi_LikesInfo" />
+    <EntitySet Name="sayHi_MangaInfo" EntityType="Self.sayHi_MangaInfo" />
+    <EntitySet Name="sayhi_MangaInfo_Chapter" EntityType="Self.sayhi_MangaInfo_Chapter" />
+    <EntitySet Name="sayhi_MangaInfo_CharacterDesign" EntityType="Self.sayhi_MangaInfo_CharacterDesign" />
+    <EntitySet Name="sayhi_NoticeInfo" EntityType="Self.sayhi_NoticeInfo" />
+    <EntitySet Name="sayhi_ParoInfo" EntityType="Self.sayhi_ParoInfo" />
+    <EntitySet Name="sayhi_ParoInfo_ParticipateInWorks" EntityType="Self.sayhi_ParoInfo_ParticipateInWorks" />
+    <EntitySet Name="sayhi_PlanningInfo" EntityType="Self.sayhi_PlanningInfo" />
+    <EntitySet Name="sayhi_PlanningInfo_Chapter" EntityType="Self.sayhi_PlanningInfo_Chapter" />
+    <EntitySet Name="sayhi_PlanningInfo_ParticipateIn" EntityType="Self.sayhi_PlanningInfo_ParticipateIn" />
+    <EntitySet Name="sayhi_PlanningInfo_ParticipateInContent" EntityType="Self.sayhi_PlanningInfo_ParticipateInContent" />
+    <EntitySet Name="sayHi_UserInfo" EntityType="Self.sayHi_UserInfo" />
+    <EntitySet Name="sayHi_UserInfo_CIF" EntityType="Self.sayHi_UserInfo_CIF" />
+    <EntitySet Name="sayHi_UserInfo_Honor" EntityType="Self.sayHi_UserInfo_Honor" />
+    <EntitySet Name="sayHi_UserInfo_Power" EntityType="Self.sayHi_UserInfo_Power" />
+    <EntitySet Name="sayHi_UserInfo_UID" EntityType="Self.sayHi_UserInfo_UID" />
+  </EntityContainer>
+</Schema>

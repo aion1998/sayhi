@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>管理-@ViewBag.Title</title>
+    <link href="~/Areas/FormalSysManagement/plug-in/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Areas/FormalSysManagement/css/Master.css" rel="stylesheet" />
+    @RenderSection("css", required: false)
+    @*@section css {*@
+</head>
+<body>
+    <div class="container-fluid">
+        <!--顶部-->
+        <div class="row sayhi-top">
+            <div class="col-md-12">
+                <!--导航-->
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="#">Sayhi</a>
+                        </div>
+
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav" id="nav">
+                                <li class="active"><a href="/FormalSysManagement/ManagingUserPage">用户</a></li>
+                                <li><a href="/FormalSysManagement/Managementer/Index">管理员</a></li>
+                                <li><a href="#">小说</a></li>
+                                <li><a href="#">漫画</a></li>
+                                <li><a href="#">社区</a></li>
+                              
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">企划 <span class="caret"></span></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">小说</a></li>
+                                        <li><a href="#">漫画</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Paro <span class="caret"></span></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">小说</a></li>
+                                        <li><a href="#">漫画</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">角色 <span class="caret"></span></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">小说</a></li>
+                                        <li><a href="#">漫画</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                           <form class="navbar-form navbar-left" role="search">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Search">
+                                </div>
+                                <button type="submit" class="btn btn-default">Submit</button>
+                            </form>
+
+                            <ul class="nav navbar-nav navbar-right">
+
+                                @if (Session["AdminInfo"] != null)
+                                {
+                                  <li><button type="button" class="btn btn-default navbar-btn">个人中心</button></li>  
+                                       <li><button type="button" class="btn btn-default navbar-btn">用户名:宁骑士</button></li>
+                                }
+                                else
+                                {
+                                   <li><button type="button" class="btn btn-default navbar-btn">登录</button></li>
+                                       <li><button type="button" class="btn btn-default navbar-btn">注销</button></li>
+                                }
+                            </ul>
+
+
+
+                        </div>
+                    </div><!-- /.container-fluid -->
+                </nav>
+            </div>
+        </div>
+        <div class="row">
+            @RenderBody();
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalTitle" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalTitle">Modal title</h4>
+                </div>
+                <div class="modal-body" id="myModalContent">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">明白</button>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <script src="~/Areas/FormalSysManagement/plug-in/jquery/jquery.min.js"></script>
+    <script src="~/Areas/FormalSysManagement/plug-in/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="~/Areas/FormalSysManagement/plug-in/vue.min.js"></script>
+    <script src="~/Areas/FormalSysManagement/js/Master.js"></script> 
+    
+  
+    @RenderSection("js", required: false)
+</body>
+</html>

@@ -1,0 +1,15 @@
+﻿
+.sayhi-top {
+    background-color: #f8f8f8;
+    height: 50px;
+    
+}
+
+.sayhi-info {
+    text-align: right;
+}
+
+/*重置bootsharp样式*/
+.navbar-default {
+    border: none;
+}

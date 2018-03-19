@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="sayHiModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="sayhi-AdminInfo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AdminName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="AdminImg" Type="varchar" MaxLength="100" />
+    <Property Name="AdminPwd" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Effect" Type="bit" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sayHi-BookInfo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="uid" Type="int" Nullable="false" />
+    <Property Name="bookName" Type="nvarchar" MaxLength="50" />
+    <Property Name="bookCover" Type="varchar" MaxLength="200" />
+    <Property Name="bookState" Type="char" MaxLength="1" />
+    <Property Name="bookTag" Type="nvarchar" MaxLength="200" />
+    <Property Name="bookType" Type="varchar" MaxLength="10" />
+    <Property Name="CreateTime" Type="datetime" Nullable="false" />
+    <Property Name="Effect" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sayHi-BookInfo-Chapter">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="bookId" Type="int" />
+    <Property Name="ChapterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ChapterOrderByNumber" Type="int" />
+    <Property Name="CreateTime" Type="datetime" Nullable="false" />
+    <Property Name="Effect" Type="bit" Nullable="false" />
+    <Property Name="ChapterPic" Type="varchar" MaxLength="200" />
+    <Property Name="ChapterContent" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="sayHi-BookInfo-CharacterDesign">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="bookId" Type="int" />
+    <Property Name="CharacterDesignId" Type="int" />
+    <Property Name="CreateTime" Type="datetime" Nullable="false" />
+    <Property Name="Effect" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sayHi-CharacterDesign">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="KeyFrame" Type="varchar" MaxLength="200" />
+    <Property Name="Gender" Type="bit" />
+    <Property Name="BgStory" Type="nvarchar(max)" />
+    <Property Name="CreateTime" Type="datetime" Nullable="false" />
+    <Property Name="Type" Type="varchar" MaxLength="100" />
+    <Property Name="Effect" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sayhi-LikesInfo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RelationId" Type="int" Nullable="false" />
+    <Property Name="RelationType" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Effect" Type="bit" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sayHi-MangaInfo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Cover" Type="varchar" MaxLength="200" />
+    <Property Name="BookSource" Type="int" />
+    <Property Name="State" Type="bit" />
+    <Property Name="OtherPerson" Type="nvarchar" MaxLength="200" />
+    <Property Name="uId" Type="int" Nullable="false" />
+    <Property Name="Type" Type="varchar" MaxLength="200" />
+    <Property Name="CreateTime" Type="datetime" Nullable="false" />
+    <Property Name="Effect" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sayhi-MangaInfo-Chapter">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MangaId" Type="int" />
+    <Property Name="Content" Type="varchar" MaxLength="200" />
+    <Property Name="Sort" Type="int" />
+    <Property Name="CreateTime" Type="datetime" />
+    <Property Name="Effect" Type="bit" />
+  </EntityType>
+  <EntityType Name="sayhi-MangaInfo-CharacterDesign">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MangaId" Type="int" />
+    <Property Name="CharacterDesignId" Type="int" />
+    <Property Name="CreateTime" Type="datetime" />
+    <Property Name="Effect" Type="bit" />
+  </EntityType>
+  <EntityType Name="sayhi-NoticeInfo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NoticeTitle" Type="nvarchar" MaxLength="100" />
+    <Property Name="UserId" Type="int" />
+    <Property Name="NoticeContent" Type="nvarchar(max)" />
+    <Property Name="Effect" Type="bit" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime" Nullable="false" />
+    <Property Name="CheckNum" Type="int" />
+  </EntityType>
+  <EntityType Name="sayhi-ParoInfo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" />
+    <Property Name="NoticeId" Type="int" />
+    <Property Name="ParoName" Type="nvarchar" MaxLength="100" />
+    <Property Name="State" Type="bit" />
+    <Property Name="Effect" Type="bit" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sayhi-ParoInfo-ParticipateInWorks">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ParoId" Type="int" Nullable="false" />
+    <Property Name="WorksId" Type="int" Nullable="false" />
+    <Property Name="Effect" Type="bit" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime" Nullable="false" />
+    <Property Name="WorlsType" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sayhi-PlanningInfo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="NoticeId" Type="int" Nullable="false" />
+    <Property Name="PlanningName" Type="nvarchar" MaxLength="100" />
+    <Property Name="WorksName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateTime" Type="datetime" Nullable="false" />
+    <Property Name="PlanningState" Type="nvarchar" MaxLength="10" />
+    <Property Name="Effect" Type="bit" Nullable="false" />
+    <Property Name="StartTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="sayhi-PlanningInfo-Chapter">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PlanningId" Type="int" Nullable="false" />
+    <Property Name="ChapterTitel" Type="nvarchar" MaxLength="100" />
+    <Property Name="ChapterContent" Type="nvarchar(max)" />
+    <Property Name="ChapterSort" Type="int" />
+    <Property Name="Effect" Type="bit" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sayhi-PlanningInfo-ParticipateIn">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PlanningId" Type="int" Nullable="false" />
+    <Property Name="ParticipantId" Type="int" Nullable="false" />
+    <Property Name="CharacterDesignId" Type="int" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime" Nullable="false" />
+    <Property Name="Effect" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sayhi-PlanningInfo-ParticipateInContent">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ChapterId" Type="int" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="CreateTime" Type="datetime" Nullable="false" />
+    <Property Name="Effect" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sayHi-UserInfo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Pwd" Type="varchar" MaxLength="100" />
+    <Property Name="HeadPortrait" Type="varchar" MaxLength="300" />
+    <Property Name="BannerPic" Type="varchar" MaxLength="300" />
+    <Property Name="Power" Type="int" />
+    <Property Name="Autograph" Type="nvarchar" MaxLength="500" />
+    <Property Name="Integral" Type="int" />
+    <Property Name="CreateTime" Type="datetime" Nullable="false" />
+    <Property Name="Effect" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sayHi-UserInfo-CIF">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ContactInformation" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Url" Type="varchar" MaxLength="100" />
+    <Property Name="Number" Type="varchar" MaxLength="100" />
+    <Property Name="CreateTime" Type="datetime" Nullable="false" />
+    <Property Name="Effect" Type="bit" Nullable="false" />
+    <Property Name="uid" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sayHi-UserInfo-Honor">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="uid" Type="int" Nullable="false" />
+    <Property Name="UidOnely" Type="int" Nullable="false" />
+    <Property Name="HonorName" Type="nvarchar" MaxLength="50" />
+    <Property Name="HonorLv" Type="int" />
+    <Property Name="CreateTime" Type="datetime" Nullable="false" />
+    <Property Name="Effect" Type="bit" />
+  </EntityType>
+  <EntityType Name="sayHi-UserInfo-Power">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Identification" Type="int" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateTime" Type="datetime" />
+    <Property Name="Effect" Type="bit" />
+  </EntityType>
+  <EntityType Name="sayHi-UserInfo-UID">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UIDName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UIDExp" Type="int" />
+    <Property Name="NumberOfTimes" Type="int" />
+    <Property Name="CreateTime" Type="datetime" Nullable="false" />
+    <Property Name="Effect" Type="bit" Nullable="false" />
+    <Property Name="uid" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="sayHiModelStoreContainer">
+    <EntitySet Name="sayhi-AdminInfo" EntityType="Self.sayhi-AdminInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sayHi-BookInfo" EntityType="Self.sayHi-BookInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sayHi-BookInfo-Chapter" EntityType="Self.sayHi-BookInfo-Chapter" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sayHi-BookInfo-CharacterDesign" EntityType="Self.sayHi-BookInfo-CharacterDesign" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sayHi-CharacterDesign" EntityType="Self.sayHi-CharacterDesign" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sayhi-LikesInfo" EntityType="Self.sayhi-LikesInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sayHi-MangaInfo" EntityType="Self.sayHi-MangaInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sayhi-MangaInfo-Chapter" EntityType="Self.sayhi-MangaInfo-Chapter" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sayhi-MangaInfo-CharacterDesign" EntityType="Self.sayhi-MangaInfo-CharacterDesign" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sayhi-NoticeInfo" EntityType="Self.sayhi-NoticeInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sayhi-ParoInfo" EntityType="Self.sayhi-ParoInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sayhi-ParoInfo-ParticipateInWorks" EntityType="Self.sayhi-ParoInfo-ParticipateInWorks" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sayhi-PlanningInfo" EntityType="Self.sayhi-PlanningInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sayhi-PlanningInfo-Chapter" EntityType="Self.sayhi-PlanningInfo-Chapter" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sayhi-PlanningInfo-ParticipateIn" EntityType="Self.sayhi-PlanningInfo-ParticipateIn" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sayhi-PlanningInfo-ParticipateInContent" EntityType="Self.sayhi-PlanningInfo-ParticipateInContent" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sayHi-UserInfo" EntityType="Self.sayHi-UserInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sayHi-UserInfo-CIF" EntityType="Self.sayHi-UserInfo-CIF" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sayHi-UserInfo-Honor" EntityType="Self.sayHi-UserInfo-Honor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sayHi-UserInfo-Power" EntityType="Self.sayHi-UserInfo-Power" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sayHi-UserInfo-UID" EntityType="Self.sayHi-UserInfo-UID" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

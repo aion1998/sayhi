@@ -1,0 +1,66 @@
+﻿
+@{
+    ViewBag.Title = "用户管理";
+    Layout = "~/Areas/FormalSysManagement/Views/Shared/MasterPage.cshtml";
+}
+@section css {
+    <link href="~/Areas/FormalSysManagement/css/ManagingUser.css?id=1121" rel="stylesheet" />
+}
+
+<!-- 添加用户 -->
+<div class="modal fade" id="addUser" tabindex="-1" role="dialog" aria-labelledby="addUser" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">添加用户</h4>
+            </div>
+            <div class="modal-body" >
+                <input type="text" name="uname" id="uname" placeholder="用户名" /><br />
+                <input type="text" name="upwd" id="upwd" placeholder="密码" /><br />
+                <input type="button" onclick="sayhi.user.submitAddUserView(11)" value="提交" />
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">明白</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-12">
+    <div class="col-md-5 col-md-offset-3" id="list">
+
+
+
+        <ul class="list-group sayhi-user-list">
+            <li class="list-group-item" v-for="todo in todos">
+                <a class="badge" href="#">漫画</a>
+                <a class="badge" href="#">小说</a>
+                <a class="badge" href="#">Paro</a>
+                <a class="badge" href="#">角色</a>
+                <a class="badge delUserInfo" onclick="sayhi.user.delUserInfo({{todo.id}})" href="#">删除</a>
+                <div class="sayhi-list-item">
+                    <span class="glyphicon glyphicon-user"></span>
+                    <span>{{todo.Name}}</span>
+                </div>             
+
+            </li>
+            <li class="list-group-item">
+                <a id="upPage" href="javascript:;" onclick="sayhi.pageData.upPage(sayhi.user.request_page)">上一页</a>
+                <a href="javascript:;" onclick="sayhi.pageData.nextPage(sayhi.user.request_page)">下一页</a>
+            </li>
+        </ul>
+
+
+    </div>
+
+    <div class="col-md-2">
+        <button onclick="javascript: sayhi.user.showAddUserView();" type="button" class="btn btn-default">新建用户</button>
+    </div>
+</div>
+@section js {
+
+    <script src="~/Areas/FormalSysManagement/js/ManagingUserPage.js?id=1"></script>
+}
+
+

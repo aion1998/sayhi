@@ -1,0 +1,79 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Sayhi管理-@ViewBag.Title</title>
+    <link href="~/layui-v2.2.45/css/layui.css" rel="stylesheet" />
+    <script src="~/js/jquery-1.8.1.min.js"></script>
+    <style>
+        .sayhi-l-menu {
+            background: #fff;
+        }
+
+            .sayhi-l-menu > ul {
+                height: 100%;
+                text-align:center;
+                overflow:hidden;
+            }
+
+                .sayhi-l-menu > ul > li {
+                    display: inline-block;
+                    padding:10px;
+                    width: 90%;
+                    border-bottom:2px solid #ccc;
+                }
+
+                    .sayhi-l-menu > ul > li > a {
+                        color: #000;
+                    }
+                    .sayhi-l-menu > ul >li:hover {
+                        border: 1px solid #000;
+                    }
+
+
+        .sayhi-t-menu {
+            height: 50px;
+            background: #fff;
+            color: #fff;
+        }
+
+            .sayhi-t-menu ul {
+                line-height: 50px;
+            }
+
+                .sayhi-t-menu ul li {
+                    float: left;
+                    display: inline-block;
+                    padding-left: 10px;
+                }
+
+        .sayhi-m-content {
+            background: #d4cbcb;
+        }
+
+        .layui-row:nth-child(2) {
+            margin-top:5px;
+           border-top:2px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="layui-row sayhi-t-menu">
+        <ul id="top-menu"></ul>
+    </div>
+    <div class="layui-row">
+        <div class="layui-col-md3  sayhi-l-menu">
+            <ul id="left-menu"></ul>
+        </div>
+        <div class="layui-col-md9 sayhi-m-content" id="content">
+            @RenderBody()
+        </div>
+    </div>
+    <script src="~/js/admin.js"></script>
+</body>
+</html>

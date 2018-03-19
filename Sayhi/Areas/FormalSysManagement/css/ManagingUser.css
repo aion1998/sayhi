@@ -1,0 +1,17 @@
+﻿
+.sayhi-user-list>li {
+    /*background:url('/img/banner/banner_1.jpg')no-repeat center;*/
+    color:#0d0a0a;
+}
+
+.delUserInfo {
+     background:rgb(132, 118, 20);
+    color:#fff;
+}
+.list-group-item a:hover {
+    background-color:#0ba3fc;
+}
+
+.sayhi-list-item {
+   display:inline-block;
+}

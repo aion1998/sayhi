@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Areas/FormalSysManagement/Views/Shared/MasterPage.cshtml";
+}
+
+<form action="/FormalSysManagement/ManagingHomePage/Login" method="post">
+    <input type="text" name="name" value="" /><br />
+    <input type="text" name="pwd" value="" />
+    <input type="submit"  value="提交" />
+</form>
+@section js {
+<script type="text/javascript" src="~/Areas/FormalSysManagement/js/login.js"></script>
+    }
+

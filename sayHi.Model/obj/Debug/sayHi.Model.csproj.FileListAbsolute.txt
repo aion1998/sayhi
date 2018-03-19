@@ -1,0 +1,12 @@
+F:\appProgram\Sayhi\sayHi.Model\obj\Debug\sayHi.Model.csprojResolveAssemblyReference.cache
+F:\appProgram\Sayhi\sayHi.Model\bin\Debug\sayHi.Model.dll.config
+F:\appProgram\Sayhi\sayHi.Model\bin\Debug\sayHi.Model.dll
+F:\appProgram\Sayhi\sayHi.Model\bin\Debug\sayHi.Model.pdb
+F:\appProgram\Sayhi\sayHi.Model\bin\Debug\EntityFramework.dll
+F:\appProgram\Sayhi\sayHi.Model\bin\Debug\EntityFramework.SqlServer.dll
+F:\appProgram\Sayhi\sayHi.Model\bin\Debug\EntityFramework.xml
+F:\appProgram\Sayhi\sayHi.Model\bin\Debug\EntityFramework.SqlServer.xml
+F:\appProgram\Sayhi\sayHi.Model\bin\Debug\zh-Hans\EntityFramework.resources.dll
+F:\appProgram\Sayhi\sayHi.Model\obj\Debug\sayHi.Model.dll
+F:\appProgram\Sayhi\sayHi.Model\obj\Debug\sayHi.Model.pdb
+F:\appProgram\Sayhi\sayHi.Model\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll

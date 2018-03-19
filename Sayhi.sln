@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2005
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sayhi", "Sayhi\Sayhi.csproj", "{523904D0-58C1-4289-951D-D81BDBDBF6BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sayHi.Model", "sayHi.Model\sayHi.Model.csproj", "{11EB8156-9903-4C03-89BC-43828A78134D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{523904D0-58C1-4289-951D-D81BDBDBF6BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{523904D0-58C1-4289-951D-D81BDBDBF6BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{523904D0-58C1-4289-951D-D81BDBDBF6BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{523904D0-58C1-4289-951D-D81BDBDBF6BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11EB8156-9903-4C03-89BC-43828A78134D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11EB8156-9903-4C03-89BC-43828A78134D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11EB8156-9903-4C03-89BC-43828A78134D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11EB8156-9903-4C03-89BC-43828A78134D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1A5ED5B4-BE0F-45BF-B052-7AE308E16902}
+	EndGlobalSection
+EndGlobal

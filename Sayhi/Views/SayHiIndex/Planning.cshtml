@@ -1,0 +1,135 @@
+﻿
+@{
+    ViewBag.Title = "企划";
+    Layout = "~/Views/SayHiMasterView.cshtml";
+}
+
+@section css{
+<link href="~/css/Planning.css" rel="stylesheet" />
+}
+<!-- banner -->
+<div class="layui-row">
+    <div class="layui-col-md12">
+        <img class='am-img-thumbnail am-radius' src="banner_5.jpg" style='width: 100%;'>
+    </div>
+</div>
+<!-- Top 3 -->
+<div class="layui-row sayhi-tb-margin">
+    <div class="layui-col-md4">
+        <img class='am-circle am-center' src="~/img/other/t1.png">
+    </div>
+    <div class="layui-col-md4">
+        <img class='am-circle am-center' src="~/img/other/t2.png">
+    </div>
+    <div class="layui-col-md4">
+        <img class='am-circle am-center' src="~/img/other/t3.png">
+    </div>
+</div>
+<!-- Tab -->
+<div class="layui-row sayhi-tb-margin">
+    <div class="layui-col-md12">
+        <div class="am-tabs" data-am-tabs="{noSwipe: 1}">
+            <ul class="am-tabs-nav am-nav am-nav-tabs">
+                <li class="am-active"><a href="t1">恣意</a></li>
+                <li><a href="#t2">等候</a></li>
+                <li><a href="#t3">流浪</a></li>
+            </ul>
+            <div class="am-tabs-bd">
+                <div class="am-tab-panel am-active" id='t1'>
+                    <ul class="am-list am-list-static am-list-border">
+                        <li>
+                            <span class="am-badge am-badge-success">2017/12/19</span> <span class="am-badge am-badge-danger">新田</span>
+                            每个人都有一个死角， 自己走不出来，别人也闯不进去。
+                        </li>
+                        <li>
+                            <span class="am-badge am-badge-success">2017/12/19</span> <span class="am-badge am-badge-danger">新田</span>
+                            每个人都有一个死角， 自己走不出来，别人也闯不进去。
+                        </li>
+                        <li>
+                            <span class="am-badge am-badge-success">2017/12/19</span> <span class="am-badge am-badge-danger">新田</span>
+                            每个人都有一个死角， 自己走不出来，别人也闯不进去。
+                        </li>
+                    </ul>
+                </div>
+                <div class="am-tab-panel" id='t2'>
+                    ...
+                </div>
+                <div class="am-tab-panel" id='t3'>
+                    ...
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 企划人物 -->
+<section class="am-panel sayhi-panel-black">
+    <header class="am-panel-hd">
+        <h3 class="am-panel-title"><span class='am-icon-book'></span>&nbsp;企划人物</h3>
+    </header>
+    <div class="am-panel-bd">
+        <ul data-am-widget="gallery" class="am-gallery am-avg-lg-8 am-gallery-imgbordered" data-am-gallery="{ pureview: 1 }">
+            <li>
+                <div class="am-gallery-item">
+                    <a href="/SayHiIndex/Details/" class="">
+                        <img src="~/img/person/person_1.jpg" alt="静子" />
+                        <h3 class="am-gallery-title">静子</h3>
+                        <div class="am-gallery-desc">2375-09-26</div>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="am-gallery-item">
+                    <a href="person_1.jpg" class="">
+                        <img src="~/img/person/person_1.jpg" alt="静子" />
+                        <h3 class="am-gallery-title">静子</h3>
+                        <div class="am-gallery-desc">2375-09-26</div>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+<!-- 企划作品 -->
+<section class="am-panel sayhi-panel-black">
+    <header class="am-panel-hd">
+        <h3 class="am-panel-title"><span class='am-icon-book'></span>&nbsp;企划作品</h3>
+    </header>
+    <div class="am-panel-bd">
+        <ul data-am-widget="gallery" class="am-gallery am-avg-sm-2
+								am-avg-md-5 am-avg-lg-8 am-gallery-imgbordered" data-am-gallery="{ pureview: 1 }">
+            <li>
+                <div class="am-gallery-item">
+                    <a href="person_1.jpg" class="">
+                        <img src="~/img/book/book_1.png" alt="静子" />
+                        <h3 class="am-gallery-title">一个名为静子的成长之路</h3>
+                        <div class="am-gallery-desc">作者:静子</div>
+                        <div class="am-gallery-desc">
+                            <span>收藏:999+</span><span>评论:99+</span>
+                        </div>
+                        <div class="am-gallery-desc">2017/12/20</div>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+<!-- botoom 4 -->
+<div class="layui-row sayhi-tb-margin sayhi-b-4">
+    <div class="layui-col-md3">
+        <img class='am-circle am-center' src="~/img/person/person_2.jpg">
+        <h3>企划主:静</h3>
+    </div>
+    <div class="layui-col-md3">
+        <img class='am-circle am-center' src="~/img/person/person_2.jpg">
+        <h3>企划主:静</h3>
+    </div>
+    <div class="layui-col-md3">
+        <img class='am-circle am-center' src="~/img/person/person_2.jpg">
+        <h3>企划主:静</h3>
+    </div>
+    <div class="layui-col-md3">
+        <img class='am-circle am-center' src="~/img/person/person_2.jpg">
+        <h3>企划主:静</h3>
+    </div>
+</div>
+

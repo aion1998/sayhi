@@ -1,0 +1,231 @@
+button:focus {
+    outline: none !important;
+}
+
+.sayhi-nav {
+    height: 60px;
+}
+
+.sayhi-nav-item {
+    float: left;
+    padding-left: 50px;
+}
+
+    .sayhi-nav-item a {
+        font-size: 18px;
+        color: rgba(29, 26, 26, 0.58);
+        font-weight: normal;
+    }
+
+        .sayhi-nav-item a:hover {
+            color: #000;
+        }
+
+        .sayhi-nav-item a:focus {
+            color: rgba(35, 35, 41, 0.85);
+        }
+
+.sayhi-logo {
+    float: left;
+}
+
+#slider-top am-slides {
+    height: 200px;
+}
+
+.sayhi-top-max,
+.sayhi-foot-max {
+    background-color: #393D49;
+    color: #fff;
+    height: 50px;
+    width: 100%;
+}
+
+.sayhi-foot-max {
+    background-color: #2F4056;
+    text-align: center;
+    font-size: 16px;
+    line-height: 50px;
+}
+
+.sayhi-top-max a {
+    color: #fff;
+    padding-right: 10px;
+    font-size: 14px;
+}
+
+.top-max-l {
+    float: left;
+    line-height: 50px;
+}
+
+    .top-max-l input {
+        color: #000;
+        padding-left: 5px;
+        border-radius: 5px;
+    }
+
+.top-max-r {
+    float: right;
+    line-height: 50px;
+    padding-right: 15px;
+}
+
+.sayhi-img-text {
+    font-size: 14px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.67);
+}
+
+
+.sayhi-panel-yellow {
+    border-color: #f5cd05;
+    box-shadow: 5px 4px 10px rgba(0,0,0,0.3);
+    border-radius: 17px;
+}
+
+    .sayhi-panel-yellow header {
+        border-color: #f5cd05;
+        background-color: #f5cd05;
+        color: #fff !important;
+        border-radius: 15px 15px 0px 0px;
+    }
+
+.sayhi-panel-blue {
+    border-color: #1f3084;
+    box-shadow: 5px 4px 10px rgba(0,0,0,0.3);
+    border-radius: 17px;
+}
+
+    .sayhi-panel-blue header {
+        color: #ffffff;
+        background-color: rgb(24, 50, 124);
+        border-color: #1f3084;
+        border-radius: 15px 15px 0px 0px;
+    }
+
+.sayhi-panel-black {
+    /*rgba(29, 29, 29, 0.73);*/
+    border-color: rgba(29, 29, 29, 0.32);
+    box-shadow: 5px 4px 10px rgba(0,0,0,0.3);
+    border-radius: 17px;
+}
+
+    .sayhi-panel-black header {
+        color: #ffffff;
+        background-color: rgba(29, 29, 29, 0.73);
+        border-color: rgba(29, 29, 29, 0.73);
+        border-radius: 15px 15px 0px 0px;
+    }
+
+.sayhi-banner {
+    border-radius: 44px;
+    border: 1px solid #ccc;
+    box-shadow: 5px 4px 10px rgba(0,0,0,0.3);
+}
+
+    .sayhi-banner div:first-child {
+        border-radius: 44px;
+    }
+
+    .sayhi-banner ol {
+        bottom: 5px !important;
+    }
+
+.sayhi-nor {
+    text-align: center;
+}
+
+#uName + ul {
+    position: absolute;
+    display: none;
+}
+
+#unName + ul li {
+    float: none;
+}
+
+/*#uName:hover + ul,
+#uName:visited + ul,
+#uName:focus + ul {
+    display: block;
+    width: 100px;
+    background: rgba(57, 59, 76, 0.54);
+    color: #fff;
+    margin-top: 0;
+    padding-left: 21px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 20px 1px rgba(0,0,0,0.3);
+    /*top: 50px; 
+    right: 47px;
+    z-index: 100;
+}*/
+
+/*详情*/
+.sayhi-details-img {
+    text-align: right;
+    padding-right: 30px;
+}
+
+    .sayhi-details-img section {
+        width: 50%;
+    }
+
+    .sayhi-details-img .img {
+        position: absolute;
+        display: block;
+        top: 43px;
+        right: 32px;
+        border-radius: 15px;
+        border: 1px solid #ccc;
+        box-shadow: 5px 4px 10px rgba(0,0,0,0.3);
+    }
+
+.sayhi-detalis-msg {
+    font-size: 14px;
+}
+
+    .sayhi-detalis-msg h5 {
+        font-size: 16px;
+    }
+
+    .sayhi-detalis-msg p {
+        width: 100%;
+        word-wrap: break-word;
+    }
+
+        .sayhi-detalis-msg p > lable {
+            font-size: 16px;
+        }
+
+.sayhi-chapter {
+    padding-top: 42px;
+}
+
+    .sayhi-chapter ul li {
+        width: 20%;
+    }
+
+.sayhi-role li {
+    padding-right: 100px;
+}
+
+    .sayhi-role li:hover img {
+        box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+        border-radius: 15px;
+    }
+
+
+.show-down {
+    display: block;
+    width: 100px;
+    background: rgba(0, 0, 0, 0.73);
+    color: #fff;
+    margin-top: 0;
+    padding-left: 21px;
+    box-shadow: 0px 6px 6px 0px rgba(0,0,0,0.3);
+    top: 50px;
+    right: 47px;
+    z-index: 100;
+    display:none;
+}

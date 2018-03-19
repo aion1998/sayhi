@@ -1,0 +1,241 @@
+﻿
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/SayHiMasterView.cshtml";
+}
+
+<div class="layui-row">
+    <div class="layui-col-md5 sayhi-details-img">
+
+        <section class="am-panel sayhi-panel-blue">
+            <header class="am-panel-hd">
+                <h3 class="am-panel-title am-text-center"><span class="am-icon-picture-o"></span>&nbsp;相关作品</h3>
+            </header>
+            <div class="am-panel-bd">
+
+                <div class="am-slider am-slider-default am-slider-carousel" data-am-flexslider="{itemWidth: 200, itemMargin: 5, slideshow: false}">
+
+                    <div class="am-viewport" style="overflow: hidden; position: relative;">
+                        <ul class="am-slides" style="width: 1600%; transition-duration: 0s; transform: translate3d(0px, 0px, 0px);">
+                            <li data-thumb-alt="" style="width: 200px; margin-right: 5px; float: left; display: block;"><img src="~/img/book/book_1.png" draggable="false"></li>
+                            <li data-thumb-alt="" style="width: 200px; margin-right: 5px; float: left; display: block;"><img src="~/img/book/book_2.png" draggable="false"></li>
+                            <li style="width: 200px; margin-right: 5px; float: left; display: block;"><img src="~/img/book/book_1.png" draggable="false"></li>
+                            <li style="width: 200px; margin-right: 5px; float: left; display: block;"><img src="~/img/book/book_2.png" draggable="false"></li>
+                            <li style="width: 200px; margin-right: 5px; float: left; display: block;"><img src="~/img/book/book_1.png" draggable="false"></li>
+                            <li style="width: 200px; margin-right: 5px; float: left; display: block;"><img src="~/img/book/book_2.png" draggable="false"></li>
+                            <li style="width: 200px; margin-right: 5px; float: left; display: block;"><img src="~/img/book/book_1.png" draggable="false"></li>
+                            <li style="width: 200px; margin-right: 5px; float: left; display: block;"><img src="~/img/book/book_2.png" draggable="false"></li>
+                        </ul>
+                    </div><ol class="am-control-nav am-control-paging"><li><a href="#" class="am-active">1</a><i></i></li><li><a href="#">2</a><i></i></li></ol><ul class="am-direction-nav"><li class="am-nav-prev"><a class="am-prev" href="#"> </a></li><li class="am-nav-next"><a class="am-next" href="#"> </a></li></ul>
+                </div>
+
+            </div>
+        </section>
+
+
+
+
+        <img src="~/img/book/book_1.png" class='img' alt="a">
+    </div>
+    <div class="layui-col-md7 sayhi-detalis-msg">
+        <h5>皇后保卫战</h5>
+        <label><span class='am-icon-pencil-square-o'></span>&nbsp;作者:&nbsp;</label><span>刘宁</span>
+        <br>
+        <label><span class='am-icon-star-o'></span>&nbsp;收藏:&nbsp;</label><span>999+</span>
+        <br>
+        <label><span class='am-icon-thumbs-o-up'></span>&nbsp;点赞:&nbsp;</label><span>999+</span>
+        <p><label><span class='am-icon-clone'></span>&nbsp;简介:</label>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+        <span class='am-icon-tag'></span><tag>玄幻</tag>
+        <br>
+        <br>
+        <button class="am-btn am-btn-primary am-round">
+            下载
+            <i class="am-icon-cloud-download"></i>
+        </button>
+        <button class="am-btn am-btn-primary am-round">
+            分享
+            <i class="am-icon-share-alt"></i>
+        </button>
+        <button class="am-btn am-btn-primary am-round">
+            收藏
+            <i class="am-icon-star"></i>
+        </button>
+        <button class="am-btn am-btn-primary am-round">
+            点赞
+            <i class="am-icon-thumbs-o-up"></i>
+        </button>
+    </div>
+</div>
+<!-- 章节 -->
+<div class="layui-row">
+    <div class="layui-col-md4">
+        <h3 class='am-padding-left-sm'>涉及角色</h3>
+        <ul data-am-widget="gallery" class="am-gallery am-avg-sm-2
+				am-avg-md-3 am-avg-lg-1 am-gallery-imgbordered sayhi-role" data-am-gallery="{ pureview: true }">
+            <li>
+                <div class="am-gallery-item">
+                    <a href="~/img/person/person_2.jpg" class="">
+                        <img src="~/img/person/person_2.jpg" alt="角色名：xxxx" />
+                        <h3 class="am-gallery-title">角色名：xxxx</h3>
+                        <div class="am-gallery-desc">2375-09-26</div>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="am-gallery-item">
+                    <a href="~/img/person/person_2.jpg" class="">
+                        <img src="~/img/person/person_2.jpg" alt="角色名：xxxx" />
+                        <h3 class="am-gallery-title">角色名：xxxx</h3>
+                        <div class="am-gallery-desc">2375-09-26</div>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="am-gallery-item">
+                    <a href="~/img/person/person_3.jpg" class="">
+                        <img src="~/img/person/person_3.jpg" alt="角色名：xxxx" />
+                        <h3 class="am-gallery-title">角色名：xxxx</h3>
+                        <div class="am-gallery-desc">2375-09-26</div>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="am-gallery-item">
+                    <a href="~/img/person/person_2.jpg" class="">
+                        <img src="~/img/person/person_2.jpg" alt="角色名：xxxx" />
+                        <h3 class="am-gallery-title">角色名：xxxx</h3>
+                        <div class="am-gallery-desc">2375-09-26</div>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="layui-col-md8 sayhi-chapter">
+        <ul data-am-widget="gallery" class="am-gallery am-avg-sm-2
+				am-avg-md-3 am-avg-lg-5 am-gallery-imgbordered" data-am-gallery="{ pureview: true }">
+            <li>
+                <div class="am-gallery-item">
+                    <a href="~/img/person/person_2.jpg" class="">
+                        <img src="~/img/person/person_2.jpg" alt="章节一：xxxxx" />
+                        <h3 class="am-gallery-title">章节一：xxxxx</h3>
+                        <div class="am-gallery-desc">2375-09-26</div>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="am-gallery-item">
+                    <a href="~/img/person/person_2.jpg" class="">
+                        <img src="~/img/person/person_2.jpg" alt="章节一：xxxxx" />
+                        <h3 class="am-gallery-title">章节一：xxxxx</h3>
+                        <div class="am-gallery-desc">2375-09-26</div>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="am-gallery-item">
+                    <a href="~/img/person/person_2.jpg" class="">
+                        <img src="~/img/person/person_2.jpg" alt="章节一：xxxxx" />
+                        <h3 class="am-gallery-title">章节一：xxxxx</h3>
+                        <div class="am-gallery-desc">2375-09-26</div>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="am-gallery-item">
+                    <a href="~/img/person/person_2.jpg" class="">
+                        <img src="~/img/person/person_2.jpg" alt="章节一：xxxxx" />
+                        <h3 class="am-gallery-title">章节一：xxxxx</h3>
+                        <div class="am-gallery-desc">2375-09-26</div>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="am-gallery-item">
+                    <a href="~/img/person/person_2.jpg" class="">
+                        <img src="~/img/person/person_2.jpg" alt="章节一：xxxxx" />
+                        <h3 class="am-gallery-title">章节一：xxxxx</h3>
+                        <div class="am-gallery-desc">2375-09-26</div>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="am-gallery-item">
+                    <a href="~/img/person/person_2.jpg" class="">
+                        <img src="~/img/person/person_2.jpg" alt="章节一：xxxxx" />
+                        <h3 class="am-gallery-title">章节一：xxxxx</h3>
+                        <div class="am-gallery-desc">2375-09-26</div>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="am-gallery-item">
+                    <a href="~/img/person/person_2.jpg" class="">
+                        <img src="~/img/person/person_2.jpg" alt="章节一：xxxxx" />
+                        <h3 class="am-gallery-title">章节一：xxxxx</h3>
+                        <div class="am-gallery-desc">2375-09-26</div>
+                    </a>
+                </div>
+            </li>
+
+
+        </ul>
+        <article class="am-comment am-margin-top">
+            <a href="#link-to-user-home">
+                <img src="~/img/person/person_2.jpg" alt="" class="am-comment-avatar" width="48" height="48" />
+            </a>
+
+            <div class="am-comment-main">
+                <header class="am-comment-hd">
+                    <!--<h3 class="am-comment-title">评论标题</h3>-->
+                    <div class="am-comment-meta">
+                        <a href="#link-to-user" class="am-comment-author">某人</a>
+                        评论于 <time datetime="2013-07-27T04:54:29-07:00" title="2013年7月27日 下午7:54 格林尼治标准时间+0800">2014-7-12 15:30</time>
+                    </div>
+                </header>
+
+                <div class="am-comment-bd">
+                    ...
+                </div>
+            </div>
+        </article>
+        <article class="am-comment am-margin-top">
+            <a href="#link-to-user-home">
+                <img src="~/img/person/person_2.jpg" alt="" class="am-comment-avatar" width="48" height="48" />
+            </a>
+
+            <div class="am-comment-main">
+                <header class="am-comment-hd">
+                    <!--<h3 class="am-comment-title">评论标题</h3>-->
+                    <div class="am-comment-meta">
+                        <a href="#link-to-user" class="am-comment-author">某人</a>
+                        评论于 <time datetime="2013-07-27T04:54:29-07:00" title="2013年7月27日 下午7:54 格林尼治标准时间+0800">2014-7-12 15:30</time>
+                    </div>
+                </header>
+
+                <div class="am-comment-bd">
+                    ...
+                </div>
+            </div>
+        </article>
+        <article class="am-comment am-margin-top">
+            <a href="#link-to-user-home">
+                <img src="~/img/person/person_2.jpg" alt="" class="am-comment-avatar" width="48" height="48" />
+            </a>
+
+            <div class="am-comment-main">
+                <header class="am-comment-hd">
+                    <!--<h3 class="am-comment-title">评论标题</h3>-->
+                    <div class="am-comment-meta">
+                        <a href="#link-to-user" class="am-comment-author">某人</a>
+                        评论于 <time datetime="2013-07-27T04:54:29-07:00" title="2013年7月27日 下午7:54 格林尼治标准时间+0800">2014-7-12 15:30</time>
+                    </div>
+                </header>
+
+                <div class="am-comment-bd">
+                    ...
+                </div>
+            </div>
+        </article>
+    </div>
+</div>
+

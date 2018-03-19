@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>SayHi-@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/layui-v2.2.45/css/layui.css">
+    @*<link rel="stylesheet" type="text/css" href="http://cdn.amazeui.org/amazeui/2.7.2/css/amazeui.min.css">*@
+    <link href="~/assets/css/amazeui.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="~/css/sayhiBase.css">
+    <link href="~/css/top_menu.css" rel="stylesheet" />
+    @RenderSection("css", required: false)
+</head>
+
+<body>
+
+    <div class="top_menu">
+        @if (Session["UserInfo"] != null)
+        {
+            @Html.Action("MenuList", "Person")
+
+        }
+        else
+        {
+            <a class="menu_reg" href="/SayHiIndex/Register/">注册</a>
+            <a class="menu_login" href="/SayHiIndex/Login/">嘿！登录一下</a>
+        }
+    </div>
+    
+    <div class="top-menu layui-container">
+        <!-- 导航 -->
+        <div class="sayhi-menu">
+            <div class="menu-left">
+                <img src="~/img/ico/logo.jpg">
+            </div>
+            <div class="menu-right">
+                <ul class="menu-link">
+                    <li class="menu-link-li">
+                        <a href="/SayHiIndex/Index/">首页</a>
+                    </li>
+                    <li>
+                        <a href="#">原创作品</a>
+                        <ul class="menu-down-list">
+                            <li><a href="#">/</a></li>
+                            <li><a href="#">小说专区</a></li>
+                            <li><a href="#">/</a></li>
+                            <li><a href="#">漫画专区</a></li>
+                            <li><a href="#">/</a></li>
+                            <li><a href="#">角色专区</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-link-li">
+                        <a href="/SayHiIndex/Community/">社区</a>
+                    </li>
+                    <li class="menu-link-li">
+                        <a href="/SayHiIndex/Planning/">企划</a>
+                        <ul class="menu-down-list">
+                            <li><a href="#">/</a></li>
+                            <li><a href="#">企划说明</a></li>
+                            <li><a href="#">/</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-link-li">
+                        <a href="/SayHiIndex/Paro/">Paro</a>
+                        <ul class="menu-down-list">
+                            <li><a href="#">/</a></li>
+                            <li><a href="#">Paro说明</a></li>
+                            <li><a href="#">/</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-link-li">
+                        <a href="">关于Sayhi</a>
+                        <ul class="menu-down-list">
+                            <li><a href="#">/</a></li>
+                            <li><a href="#">使用姿势</a></li>
+                            <li><a href="#">/</a></li>
+                            <li><a href="#">愿景未来</a></li>
+                            <li><a href="#">/</a></li>
+                            <li><a href="#">新田月会</a></li>
+                            <li><a href="#">/</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="hr"></div>
+        @RenderBody()
+
+    </div>
+
+    <div class="sayhi-foot-max">© SayHi In 2017 For @DateTime.Now.Year</div>
+
+    <div class="am-modal am-modal-no-btn" tabindex="-1" id="alert">
+        <div class="am-modal-dialog">
+            <div class="am-modal-hd">
+               
+                <i id="alert-title"> Modal 标题</i>
+                <a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close>&times;</a>
+            </div>
+            <div class="am-modal-bd" id="alert-msg">
+                Modal 内容。
+            </div>
+        </div>
+    </div>
+
+    <div class="am-modal am-modal-confirm" tabindex="-1" id="confirm">
+        <div class="am-modal-dialog">
+            <div class="am-modal-hd" id="confirm-title">Sayhi</div>
+            <div class="am-modal-bd" id="confirm-msg">
+                你是猴子派来的逗比吗?
+            </div>
+            <div class="am-modal-footer">
+                <span class="am-modal-btn" data-am-modal-cancel>取消</span>
+                <span class="am-modal-btn" data-am-modal-confirm>确定</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="am-modal am-modal-prompt" tabindex="-1" id="prompt">
+        <div class="am-modal-dialog">
+            <div class="am-modal-hd">Sayhi</div>
+            <div class="am-modal-bd" id="prompt-msg">
+                来来来，吐槽点啥吧
+                <input type="text" class="am-modal-prompt-input">
+            </div>
+            <div class="am-modal-footer">
+                <span class="am-modal-btn" data-am-modal-cancel>取消</span>
+                <span class="am-modal-btn" data-am-modal-confirm>提交</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="am-modal am-modal-loading am-modal-no-btn" tabindex="-1" id="loading">
+        <div class="am-modal-dialog">
+            <div class="am-modal-hd">正在载入...</div>
+            <div class="am-modal-bd">
+                <span class="am-icon-spinner am-icon-spin"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="am-modal-actions" id="actions">
+        <div class="am-modal-actions-group">
+            <ul class="am-list">
+                <li class="am-modal-actions-header">...</li>
+                <li><a href="#"><span class="am-icon-wechat"></span> ...</a></li>
+                <li class="am-modal-actions-danger">
+                    <a href="#"><i class="am-icon-twitter"></i> ...</a>
+                </li>
+            </ul>
+        </div>
+        <div class="am-modal-actions-group">
+            <button class="am-btn am-btn-secondary am-btn-block" data-am-modal-close>取消</button>
+        </div>
+    </div>
+
+    <div class="am-popup" id="popup">
+        <div class="am-popup-inner">
+            <div class="am-popup-hd">
+                <h4 class="am-popup-title">...</h4>
+                <span data-am-modal-close
+                      class="am-close">&times;</span>
+            </div>
+            <div class="am-popup-bd">
+                ...
+            </div>
+        </div>
+    </div>
+    @*<script>
+            //注意：导航 依赖 element 模块，否则无法进行功能性操作
+            layui.use('element', function () {
+                var element = layui.element;
+
+                //…
+            });
+        </script>*@
+    @*<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>*@
+    <script src="~/js/jquery-1.8.1.min.js"></script>
+    <script type="text/javascript" src='~/layui-v2.2.45/layui.js'></script>
+    @*<script type="text/javascript" src='http://cdn.amazeui.org/amazeui/2.7.2/js/amazeui.min.js'></script>*@
+    <script src="~/assets/js/amazeui.min.js"></script>
+    <script src="~/js/sayhiMaster.js"></script>
+    @RenderSection("js", required: false)
+</body>
+</html>
